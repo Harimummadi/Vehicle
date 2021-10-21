@@ -3,26 +3,26 @@ package edu.nwmissouri.vehicle;
 import java.util.ArrayList;
 
 /**
- * Provides methods to create and run a group of Aardvarks
+ * Provides methods to create and run a group of RollsRoyces
  *
  * @author Denise Case
  */
 public class VehicleGroup {
 
-    private static ArrayList<Aardvark> myGroup;
+    private static ArrayList<RollsRoyce> myGroup;
 
     /**
-     * Create a static group of Aardvarks
+     * Create a static group of RollsRoyces
      *
-     * @return the number of animals in the group
+     * @return the number of vehicles in the group
      */
     public static int create() {
         myGroup = new ArrayList<>();
         
-        Aardvark a = new Aardvark("Abbie");
+        RollsRoyce a = new RollsRoyce("Abbie");
         myGroup.add(a);
-        myGroup.add(new Aardvark("Boss"));
-        myGroup.add(new Aardvark("Cass"));
+        myGroup.add(new RollsRoyce("Boss"));
+        myGroup.add(new RollsRoyce("Cass"));
 
         return myGroup.size();
     }
@@ -32,12 +32,12 @@ public class VehicleGroup {
      */
     public static void run() {
         System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-        System.out.println("Hey - look at the aardvarks!");
-        myGroup.forEach(aardvark -> {
-            aardvark.speak();
-            aardvark.move();
+        System.out.println("Hey - look at the vehicles!");
+        myGroup.forEach(vehicle -> {
+            vehicle.make();
+            vehicle.model();
         });
-        System.out.println("Nice aardvarks - that was fun!");
+        System.out.println("Nice vehicles - that was fun!");
         System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     }
 
